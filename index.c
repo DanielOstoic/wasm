@@ -1,7 +1,6 @@
-#include <stdio.h>
+#include <emscripten.h>
 
-int main(int argc, char ** argv){
- printf("hola\n");
-return 0;
+EMSCRIPTEN_KEEPALIVE
+int add(int a, int b) {
+    return a + b;
 }
-
